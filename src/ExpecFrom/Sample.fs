@@ -3,10 +3,15 @@ module Tests
 open Expecto
 open System
 
-// let funB a = (a: string) = null ||  if 0u >= uint32 a.Length then true else false
 
 let funA a = (a: string) = null || a.Length = 0
+// let funB a = if (a: string) = null || 0u >= uint32 a.Length then true else false
 let funB a = String.IsNullOrEmpty a
+
+Console.WriteLine(funA null);
+Console.WriteLine(funA "");
+Console.WriteLine(funB null)
+Console.WriteLine(funB "")
 
 [<Tests>]
 let tests =
