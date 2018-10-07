@@ -30,7 +30,7 @@ namespace SpeedTests {
                 Function.IsFasterThan(
                     () => Lib.ForSum(100),
                     () => Lib.LinqSum(100),
-                    "For is fater than LINQ",
+                    "For is faster than LINQ",
                     out var message
                 );
             Assert.True(result, message);
